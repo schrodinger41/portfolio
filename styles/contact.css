@@ -1,0 +1,11 @@
+.contact {
+    height: 800px;
+    border-bottom: 2px solid rgb(85,29,135);
+    padding-top: 90px;
+}
+
+.contact-text {
+    display: flex;
+    justify-content: center;
+    color: white;
+}

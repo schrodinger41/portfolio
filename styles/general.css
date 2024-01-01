@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(21,7,34);
+    font-family: Kanit;
+    margin:0;
+}
+
+@media (max-width: 768px) {
+    .body {
+        width: 100%;
+    }
+}
