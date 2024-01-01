@@ -1,23 +1,20 @@
-document.addEventListener('DOMContentLoaded', function () {
-  
-    function scrollToSection(targetId) {
-        const targetSection = document.getElementById(targetId);
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinkEls = document.querySelectorAll('.nav_link');
 
-        if (targetSection) {
+    navLinkEls.forEach(navLinkEl => {
+        navLinkEl.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const targetSectionId = navLinkEl.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetSectionId);
+
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
-        }
-    }
 
-    const navLinks = document.querySelectorAll('.nav_link');
-
-    navLinks.forEach(function (navLink) {
-        navLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            scrollToSection(targetId);
+            navLinkEls.forEach(el => el.classList.remove('is-active'));
+            navLinkEl.classList.add('is-active');
         });
     });
 });
