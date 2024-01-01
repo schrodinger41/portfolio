@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.getElementById(targetSectionId);
 
             window.scrollTo({
-                top: targetSection.offsetTop,/*hi*/
+                top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
 
